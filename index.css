@@ -1,0 +1,69 @@
+*{
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+html,body{
+    width:100%;
+    height: 100%;
+    background:#000;
+}
+.scan{
+    width: 450px;
+    height: 450px;
+    border:2px solid red;
+    margin: 80px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+ul{
+    width: 250px;
+    height: 250px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 2s;
+}
+ul li{
+    width: 250px;
+    height: 250px;
+    /*background: mediumseagreen;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 2s;
+}
+.scan ul:hover{
+    transform: rotate3d(1,1,1,360deg);
+}
+.scan:hover .left{
+    box-shadow: 0 0 15px 10px rgba(255,255,255,0.5);
+    background: mediumpurple;
+    transform: translateX(-125px) rotateY(90deg);
+}
+.scan:hover .right{
+    box-shadow: 0 0 15px 10px rgba(255,255,255,0.5);
+    background: gold;
+    transform: translateX(125px) rotateY(90deg);
+}
+.scan:hover .top{
+    box-shadow: 0 0 15px 10px rgba(255,255,255,0.5);
+    background: aqua;
+    transform: translateY(-125px) rotateX(90deg);
+}
+.scan:hover .bottom{
+    box-shadow: 0 0 15px 10px rgba(255,255,255,0.5);
+    background: green;
+    transform: translateY(125px) rotateX(90deg);
+}
+.scan:hover .before{
+    box-shadow: 0 0 15px 10px rgba(255,255,255,0.5);
+    /*background: hotpink;*/
+    transform: translateZ(125px);
+}
+.scan:hover .after{
+    box-shadow: 0 0 15px 10px rgba(255,255,255,0.5);
+    background: orangered;
+    transform: translateZ(-125px);
+}
